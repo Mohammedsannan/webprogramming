@@ -1,7 +1,6 @@
 <html>
 <body>
 <h2>search</h2>
-<body>
 
 <?php
 $con=mysqli_connect("localhost","root","" , "book");
@@ -13,7 +12,7 @@ $sql="SELECT * FROM book1 WHERE title LIKE '%{$title}%'";
 $result=mysqli_query($con, $sql);
 
 echo"<table border=1>";
-echo"<tr><th>bookno</th><th>name</th><th>author</th><th>price</th></tr>"; 
+echo"<tr><th>bookno</th><th>title</th><th>author</th><th>price</th></tr>"; 
 while ($row=mysqli_fetch_array($result))
 { 
 echo"<tr>
